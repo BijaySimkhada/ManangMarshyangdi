@@ -1,0 +1,79 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Montserrat, sanserif;
+}
+.regform-container{
+	width: 90vw;
+	margin-top: 20vh;
+	max-height: 70vh;
+	min-height: 40vh;
+	max-width: 90vw;
+	min-width: 40vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.regform-container .regform-img{
+	max-height: 60vh;
+	min-height: 30vh;
+	min-width: 30vw;
+	max-width: 45vw;
+	object-fit: contain;
+	border-radius: 5px;
+	position: relative;
+	left:2px;
+}
+.regform-container form{
+	height: 70vh;
+	width: 50vw;
+	max-height: 60vh;
+	min-height: 40vh;
+	min-width: 30vw;
+	max-width: 45vw;
+	background-color: #272424;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    left:-5px;
+}
+
+.regform-container form input[type="text"], input[type="password"], input[type="email"], input[type="number"]{
+    margin: 5px 0px 5px 0px;
+    padding-left: 20px;
+    height: 25vh;
+    width: 18vw;
+    border-radius: 5px;
+    border-style: bold;
+    border-color: #4CAF50;
+}
+.regform-container form p input[type="text"]{\
+	margin: 5px 0px 5px 0px;
+    padding-left: 20px;
+    height: 5vh;
+    width: 8vw;
+    border-radius: 5px;
+    border-color: #4CAF50;
+    border-style: bold;
+}
+.regform-container form input[type="submit"]{
+    margin: 10px 19px 15px 17px;
+    color: black;
+    background-color: white;
+    height: 24vh;
+    width: 8vw;
+    /*border-radius: 10px;*/
+    border-style: bold;
+    font-weight: bold;
+    font-size: 15pt;
+    border-color: #4CAF50;
+}
+.regform-container form input[type="submit"]:hover{
+   background-color: #4CAF50; /* Green */
+  	color: white;
+  	border-color: white;
+}

@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary-textcolor: white;
+    --secondary-text-color: black;
+    --primary-background: black;
+    --secondary-background: #272424;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    --bg-color: #fbffc4;
+    --bg-color-s: #5ec72d;
+    --bg:linear-gradient(to right, #fbffc4, #5ec72d);
+    --bg-color-new: linear-gradient(to left, #fbffc4, #5ec72d);
+    --transition-speed: 0.8s;
+}
+body{
+    background-image: var(--bg-color-new);
+    width: 100%;
+    min-width: 500px;
+}
+header{
+    width: 100%;
+    height: 4vh;
+    background-color: var(--secondary-background);
+    color: white;
+}
+header .header{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+header ul li{
+    margin-top: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 12px
+}
+.nav-bar{
+    background-color: var(--secondary-background);
+    color: var(--primary-textcolor);
+    width: 100%;
+    height: 12vh;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-bar ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    width: auto;
+    position: relative;
+    left: 90px;
+}
+.nav-bar ul li{
+    height: 100%;
+    width: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-bar ul li:hover{
+    background-color: #fbffc4;
+    transition: var(--transition-speed);
+    cursor: pointer;
+    color: black;
+}
+.nav-bar ul li a{
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width:100%;
+    padding: 0px 30px 0px 30px;
+    color: var(--primary-textcolor);
+}
+.nav-bar ul li a:hover{
+    background-color: #fbffc4;
+    transition: var(--transition-speed);
+    cursor: pointer;
+    color: black;
+}
+.heading{
+    font-size: 8rem;
+    z-index: 0;
+    position: relative;
+    left : 10px;
+    letter-spacing: 5px;
+}
+.heading:hover{
+    pointer: cursor;
+}
+.first-section{
+    height: 55vh;
+    width: 100%;
+    position: relative;
+    top:10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--bg);
+    clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+.first-section img{
+    height: 25vh;
+    width: auto;
+    margin-bottom: 15px;
+    z-index: 5;
+}
+.search-container{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.search-container form{
+    z-index: 4;
+}
+.search-container form input[type=text]{
+    height: 5vh;
+    width: 25vw;
+    border-style: none;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    padding-left: 5px;
+}
+.fa-search{
+    position: relative;
+    left: -25px;
+}
+.fa-search:hover{
+    color: var(--bg-color-s);
+}
+.second-section{
+    width: 90%;
+    height: auto;
+    position: relative;;
+    left: 0vw;
+    top:10vh;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.second-section h1, .third-section h1{
+    font-family: 'Kaushan Script', cursive;
+    position: relative;
+    left: 42%;
+    width: 20%;
+    text-decoration: underline;
+    margin:20px 0 20px 0;
+    font-size: 2rem;
+}
+.second-section h1, .third-section h1:hover{
+    cursor: pointer;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.second-section .card{
+    margin: 5px 10px 10px 10px;
+    padding: 10px 0px 10px 0px;
+    height: auto;
+    border-radius: 10px;
+    width: 250px;
+    background-color: var(--secondary-background);
+    color: var(--primary-textcolor);
+    font-family: 'montserrat', sans-serif;
+}
+.card .card-header{
+    text-transform: uppercase;
+    padding: 10px 10px 10px 20px;
+}
+.card .card-body{
+    width: 100%;
+    height: 30vh;
+    background-color: white;
+}
+.card .card-body img{
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+.card .card-footer{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.third-section{
+    width: 90%;
+    height: auto;
+    position: relative;;
+    left: 3vw;
+    top:10vh;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tournament{
+    margin: 7px 46px 5px 42px;
+    padding: 10px 20px 5px 20px;
+    height: 60vh;
+    max-height: 65vh;
+    border-radius: 20px;
+    width: 450px;
+    background-color: var(--secondary-background);
+    color: var(--primary-textcolor);
+    font-family: 'montserrat', sans-serif;
+}
+.tournament .t-body{
+    height: 70%;
+    width: 100%;
+}
+.tournament .t-body img{
+    margin: 20px 0px 5px 0px;
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.t-body .description{
+    max-height: 5%;
+    overflow: hidden;    
+}
+.t-footer{
+    margin-top: 20px;
+    position: relative;
+    height: 20%;
+}
+
+
+
+footer{
+    position: relative;
+    top: 8vh;
+    width: 100%;
+    background-color: var(--secondary-background);
+    height: 20vh;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding-top: 1vh;
+}
+footer .footer-items{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.footer-items li{
+    margin: 5px 10px 5px 10px;
+}
+.footer-items li:hover{
+    color: var(--bg-color-s);
+}
+.information-items{
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+.information-items li{
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.links {
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+.links li{
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body style="background-image: linear-gradient(to right, #fbffc4, #5ec72d);">
+    <img src="{% static 'image/jiff.png' %}" alt="" style="position: absolute; z-index: -99; left:100vh ; top: 20vh; height: 500px; width: 500px;">
+    <div class="login-container">
+        <img src="{% static 'image/loginimage.jpg' %}" alt="balalala">
+        <form action="{% url 'login' %}" method="POST">
+            <h1 style="font-family: montserrat; color: white; margin-top: 0vh; cursor: pointer;">Login</h1>
+            {% csrf_token %}
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="password">
+            <input type="submit" value="Login">
+            {% if message %}
+            <center><p style="font-family: montserrat; color: red; padding: 10px 0px 10px 0px;position: relative; margin: 5px 0 10px 0;">{{ message }}</p></center>
+            {% endif %}
+            <center><a href="{% url 'register' %}" style="font-family: montserrat; color: white; position: relative; margin-top:5px; margin-bottom:5px; ">Register here</a></center>
+        </form>
+    </div>
+</body>
+{% endblock %}

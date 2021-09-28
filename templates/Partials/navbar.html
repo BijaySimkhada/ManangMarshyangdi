@@ -1,0 +1,31 @@
+<header>
+    <ul class="header">
+        {% if msg %}
+        <li style="color: rgb(2, 255, 2) ; margin-right: 5vw;"> {{ msg }} </li>
+        {% endif %}
+        {% if error_msg %}
+        <li style="color: red ; margin-right: 5vw;"> {{ error_msg }} </li>
+        {% endif %}
+        {% if warning_msg %}
+        <li style="color: orange ; margin-right: 5vw;"> {{ warning_msg }} </li>
+        {% endif %}
+        <li class="header-items">MANANG FUTSAL</li>
+        <li class="header-items">| 016200126 | 9803232295 | 9841173000 |</li>
+        <li class="header-items">manangfutsal@gmail.com</li>
+    </ul>
+</header>
+<nav class="nav-bar">
+    <img src="logo.png" alt="" height="45px" width="auto">
+    <!--<h1 class="nav-items" style="font-size : 2rem; font-family: 'montserrat', sans-serif;">Logo</h1> -->
+    <ul class="nav-items-container">
+        <li class="nav-items"><a href="{% url 'home' %}">Home</a></li>
+        <li class="nav-items"><a href="{% url 'book' %}">Book</a></li>
+        <li class="nav-items"><a href="{% url 'about' %}">About Us</a></li>
+        {% if user.is_authenticated %}
+            <li class="nav-items"><a href="#">Hello, {{ user.username }}</a></li>
+            <li class="nav-items"><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li class="nav-items"><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>
